@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="./js/flexible.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <i><</i>
+            <span class="span">无连接</span>
+            <img src="./images/icon_03.gif" alt="">
+        </header>
+        <section>
+            <div class="content">
+                <dl>
+                    <dd><img src="./images/1_03.gif" alt="" class="one"></dd>
+                    <dt>电源</dt>
+                </dl>
+                <dl>
+                    <dd><img src="./images/2_03.gif" alt="" class="two"></dd>
+                    <dt>首页</dt>
+                </dl>
+                <dl>
+                    <dd><img src="./images/3_03.gif" alt="" class="three"></dd>
+                    <dt>菜单</dt>
+                </dl>
+                <dl>
+                    <dd><img src="./images/4_03.gif" alt="" class="four"></dd>
+                    <dt>截屏</dt>
+                </dl>
+            </div>
+            <div class="box">
+                滑动控制上下左右,点击确定
+                <p>长按调节电视音量</p>
+            </div>
+        </section>
+        <footer>
+            <img src="./images/b1_03.gif" alt="">
+            <img src="./images/b2_03.gif" alt="" class="img">
+            <i></i>
+        </footer>
+    </div>
+    <script>
+        var img = document.querySelectorAll('.content dd img');
+        var box = document.querySelector('.box');
+        img.forEach(function(i) {
+            i.onclick = function() {
+                box.innerHTML = '';
+                if (this.className == "one") {
+                    box.innerHTML = '电源'
+                } else if (this.className == "two") {
+                    box.innerHTML = '首页'
+                } else if (this.className == "three") {
+                    box.innerHTML = '菜单'
+                } else if (this.className == "four") {
+                    box.innerHTML = '截屏'
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
